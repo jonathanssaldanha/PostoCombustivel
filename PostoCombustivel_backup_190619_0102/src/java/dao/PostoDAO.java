@@ -37,6 +37,7 @@ public class PostoDAO {
     public void alterar(Posto produto){
         String sql = "UPDATE produto SET descricao_produto = ?, preco_produto = ?, preco_gasolina = ? WHERE codigo_produto = ?";
         try{
+            
             stmt = conn.prepareStatement(sql);
             stmt.setString(1, produto.getDescricao_produto());
             stmt.setDouble(2, produto.getPreco_produto());
